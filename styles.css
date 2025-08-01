@@ -53,6 +53,7 @@ body {
   background-color: var(--btn-bg-color);
   color: var(--btn-color);
   text-transform: uppercase;
+  transition: background-color 100ms ease-in-out;
 }
 
 .control.btn-reset {
@@ -76,16 +77,15 @@ body {
 .control.btn-check {
   --btn-bg-color: var(--green-900);
   --btn-color: white;
+  text-align: center;
+  position: relative;
+  block-size: 100%;
+  inline-size: 100%;
+  display: inline-block;
   font-size: var(--font-step-3);
   & input[type="checkbox"] {
     opacity: 0;
     position: absolute;
-  }
-  & label {
-    text-align: center;
-    position: relative;
-    width: 100%;
-    display: inline-block;
   }
 
   &:has(input:focus-visible) {
