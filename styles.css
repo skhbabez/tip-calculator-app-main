@@ -1,0 +1,108 @@
+@font-face {
+  font-family: "Space Mono";
+  font-style: normal;
+  font-weight: 700;
+  src: local("Space Mono"), url("fonts/SpaceMono-Bold.ttf") format("truetype");
+}
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-inline-size: 100%;
+  display: block;
+}
+
+:root {
+  --font-base: "Space Mono", sans-serif;
+  --font-weight-bold: 700;
+  --green-200: hsl(185, 41%, 84%);
+  --green-400: hsl(172, 67%, 45%);
+  --green-750: hsl(183, 79%, 24%);
+  --green-800: hsl(183, 85%, 21%);
+  --green-900: hsl(183, 100%, 15%);
+  --space-8: 0.5rem;
+  --font-step-0: 0.8125rem;
+  --font-step-1: 1rem;
+  --font-step-2: 1.25rem;
+  --font-step-3: 1.5rem;
+}
+
+body {
+  font-family: var(--font-base);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.5;
+}
+
+.control {
+  user-select: none;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: none;
+  border-radius: 1px;
+  width: 100%;
+  padding-block: var(--space-8);
+  outline: none;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-color);
+  text-transform: uppercase;
+}
+
+.control.btn-reset {
+  --btn-bg-color: var(--green-400);
+  --btn-color: var(--green-900);
+  font-size: var(--font-step-2);
+  &:focus-visible {
+    outline: var(--green-400) solid 1px;
+    box-shadow: 0px 0px 5px 3px var(var(--green-400));
+  }
+  &:hover,
+  &:focus-visible {
+    background-color: var(--green-200);
+  }
+  &:disabled {
+    color: var(--green-800);
+    background-color: var(--green-750);
+  }
+}
+
+.control.btn-check {
+  --btn-bg-color: var(--green-900);
+  --btn-color: white;
+  font-size: var(--font-step-3);
+  & input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+  }
+  & label {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    display: inline-block;
+  }
+
+  &:has(input:focus-visible) {
+    outline: var(--green-900) solid 1px;
+    box-shadow: 0px 0px 5px 3px var(--green-900);
+  }
+  &:has(input:hover),
+  &:has(input:focus-visible) {
+    background-color: var(--green-200);
+    color: var(--green-900);
+  }
+  &:has(input:checked) {
+    color: var(--green-900);
+    background-color: var(--green-400);
+  }
+  &:has(input:disabled) {
+    color: white;
+    background-color: var(--green-900);
+  }
+}
