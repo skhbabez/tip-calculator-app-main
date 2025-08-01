@@ -50,19 +50,19 @@ body {
   width: 100%;
   padding-block: var(--space-8);
   outline: none;
-  background-color: var(--btn-bg-color);
-  color: var(--btn-color);
+
   text-transform: uppercase;
   transition: background-color 100ms ease-in-out;
 }
 
 .control.btn-reset {
-  --btn-bg-color: var(--green-400);
-  --btn-color: var(--green-900);
+  background-color: var(--green-400);
+  color: var(--green-900);
+
   font-size: var(--font-step-2);
   &:focus-visible {
     outline: var(--green-400) solid 1px;
-    box-shadow: 0px 0px 5px 3px var(var(--green-400));
+    box-shadow: 0px 0px 5px 3px var(--green-400);
   }
   &:hover,
   &:focus-visible {
@@ -75,8 +75,8 @@ body {
 }
 
 .control.btn-check {
-  --btn-bg-color: var(--green-900);
-  --btn-color: white;
+  background-color: var(--green-900);
+  color: white;
   text-align: center;
   position: relative;
   block-size: 100%;
