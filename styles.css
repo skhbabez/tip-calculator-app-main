@@ -22,10 +22,12 @@ img {
   --font-base: "Space Mono", sans-serif;
   --font-weight-bold: 700;
   --grey-50: hsl(189, 47%, 97%);
-  --grey-400: hsl(184, 14%, 56%);
-  --grey-550: hsl(180, 18%, 40%);
-  --grey-500: hsl(186, 14%, 43%);
+  --grey-200: hsl(185, 41%, 84%);
   --grey-300: hsl(184, 19%, 68%);
+  --grey-400: hsl(184, 14%, 56%);
+  --grey-500: hsl(186, 14%, 43%);
+  --grey-550: hsl(180, 18%, 40%);
+  --grey-600: hsl(180, 25%, 32%);
   --green-200: hsl(185, 41%, 84%);
   --green-400: hsl(172, 67%, 45%);
   --green-750: hsl(183, 79%, 24%);
@@ -42,13 +44,17 @@ img {
   --font-step-3: 1.5rem;
   --font-step-4: 2rem;
   --font-step-5: 3rem;
-  --fluid-32-48: clamp(2rem, 1.0458rem + 4.0712vw, 3rem); /*m-t*/
+  --font-mt-32-48: clamp(2rem, 1.0458rem + 4.0712vw, 3rem);
+  --space-mt-32-48: clamp(2rem, 1.0458rem + 4.0712vw, 3rem);
+  --space-mt-24-80: clamp(1.5rem, -1.8397rem + 14.2494vw, 5rem);
+  --space-mt-32-40: clamp(2rem, 1.5229rem + 2.0356vw, 2.5rem);
 }
 
 body {
   font-family: var(--font-base);
   font-weight: var(--font-weight-bold);
   line-height: 1.5;
+  background-color: var(--grey-200);
 }
 
 .btn {
@@ -188,7 +194,7 @@ body {
 }
 
 .amount-value {
-  font-size: var(--fluid-32-48);
+  font-size: var(--font-mt-32-48);
   color: var(--green-400);
   &::before {
     content: "$";
@@ -210,4 +216,27 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--space-24);
+}
+
+.calculator {
+  border-radius: 25px 25px 0 0;
+
+  background-color: white;
+  padding-block: var(--space-mt-32-48);
+  padding-inline: var(--space-mt-24-80);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-mt-32-40);
+}
+
+header {
+  padding-block-start: 50px;
+  padding-block-end: 40px;
+}
+& h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.5ch;
+  color: var(--grey-600);
+  text-align: center;
+  line-height: 1;
 }
