@@ -63,7 +63,7 @@ body {
   transition: background-color 100ms ease-in-out;
 }
 
-.btn.btn-reset {
+.btn-reset {
   background-color: var(--green-400);
   color: var(--green-900);
 
@@ -82,7 +82,7 @@ body {
   }
 }
 
-.btn.btn-check {
+.btn-check {
   background-color: var(--green-900);
   color: white;
   text-align: center;
@@ -115,19 +115,23 @@ body {
   }
 }
 
-.input-custom {
-  background-color: var(--grey-50);
-  color: var(--grey-550);
+.control {
   font-family: inherit;
   line-height: inherit;
   font-weight: inherit;
+  background-color: var(--grey-50);
+  outline: none;
   border: none;
   padding-block: var(--space-8);
+  inline-size: 100%;
+  border-radius: 1px;
+}
+
+.input-custom {
+  color: var(--grey-550);
   font-size: var(--font-step-3);
   text-align: center;
-  width: 100%;
-  border-radius: 1px;
-  outline: none;
+  inline-size: 100%;
 }
 
 .input-number {
@@ -141,23 +145,13 @@ body {
       color: var(--orange-400);
     }
   }
-
   & input {
     margin-block-start: var(--space-8);
-    background-color: var(--grey-50);
+    background-color: var(--grey-50); /*why cant I remove this*/
     color: var(--green-900);
-    font-family: inherit;
-    line-height: inherit;
-    font-weight: inherit;
-    border: none;
-    padding-block: var(--space-8);
     padding-inline: var(--space-16);
     font-size: var(--font-step-3);
     text-align: end;
-    width: 100%;
-    border-radius: 1px;
-    outline: none;
-
     &::placeholder {
       color: var(--grey-300);
     }

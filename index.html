@@ -41,7 +41,7 @@
         </label>
 
         <input
-          class="input-custom"
+          class="control input-custom"
           name="tip-custom"
           aria-label="custom"
           placeholder="Custom"
@@ -52,21 +52,33 @@
             <p>Bill</p>
             <p>Can’t be zero</p>
           </label>
-          <input id="bill" class="dollar" type="text" placeholder="0" />
+          <input id="bill" class="control dollar" type="text" placeholder="0" />
         </div>
         <div class="input-number">
           <label for="no-people">
             <p>Number of People</p>
             <p>Can’t be zero</p>
           </label>
-          <input id="no-people" class="person" type="text" placeholder="0" />
-          <div class="amount-container">
-            <div class="amount-label">
-              <p>Tip Amount</p>
-              <p>person</p>
-            </div>
-            <p class="amount">0.00</p>
+          <input
+            id="no-people"
+            class="control person"
+            type="text"
+            placeholder="0"
+          />
+        </div>
+        <div class="amount-container">
+          <div class="amount-label">
+            <p>Tip Amount</p>
+            <p>person</p>
           </div>
+          <p class="amount">0.00</p>
+        </div>
+        <div class="amount-container">
+          <div class="amount-label">
+            <p>Total</p>
+            <p>person</p>
+          </div>
+          <p class="amount">0.00</p>
         </div>
       </article>
     </main>
