@@ -21,12 +21,18 @@ img {
 :root {
   --font-base: "Space Mono", sans-serif;
   --font-weight-bold: 700;
+  --grey-50: hsl(189, 47%, 97%);
+  --grey-550: hsl(180, 18%, 40%);
+  --grey-500: hsl(186, 14%, 43%);
+  --grey-300: hsl(184, 19%, 68%);
   --green-200: hsl(185, 41%, 84%);
   --green-400: hsl(172, 67%, 45%);
   --green-750: hsl(183, 79%, 24%);
   --green-800: hsl(183, 85%, 21%);
   --green-900: hsl(183, 100%, 15%);
+  --orange-400: hsl(13, 70%, 60%);
   --space-8: 0.5rem;
+  --space-16: 1rem;
   --font-step-0: 0.8125rem;
   --font-step-1: 1rem;
   --font-step-2: 1.25rem;
@@ -39,7 +45,7 @@ body {
   line-height: 1.5;
 }
 
-.control {
+.btn {
   user-select: none;
   font-family: inherit;
   font-weight: inherit;
@@ -50,12 +56,11 @@ body {
   width: 100%;
   padding-block: var(--space-8);
   outline: none;
-
   text-transform: uppercase;
   transition: background-color 100ms ease-in-out;
 }
 
-.control.btn-reset {
+.btn.btn-reset {
   background-color: var(--green-400);
   color: var(--green-900);
 
@@ -74,7 +79,7 @@ body {
   }
 }
 
-.control.btn-check {
+.btn.btn-check {
   background-color: var(--green-900);
   color: white;
   text-align: center;
@@ -105,4 +110,60 @@ body {
     color: white;
     background-color: var(--green-900);
   }
+}
+
+.input-custom {
+  background-color: var(--grey-50);
+  color: var(--grey-550);
+  font-family: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  border: none;
+  padding-block: var(--space-8);
+  font-size: var(--font-step-3);
+  text-align: center;
+  width: 100%;
+  border-radius: 1px;
+  outline: none;
+}
+
+.input-number {
+  & label {
+    display: flex;
+    justify-content: space-between;
+    & p:first-of-type {
+      color: var(--grey-500);
+    }
+    & p:last-of-type {
+      color: var(--orange-400);
+    }
+  }
+
+  & input {
+    margin-block-start: var(--space-8);
+    background-color: var(--grey-50);
+    color: var(--green-900);
+    font-family: inherit;
+    line-height: inherit;
+    font-weight: inherit;
+    border: none;
+    padding-block: var(--space-8);
+    padding-inline: var(--space-16);
+    font-size: var(--font-step-3);
+    text-align: end;
+    width: 100%;
+    border-radius: 1px;
+    outline: none;
+
+    &::placeholder {
+      color: var(--grey-300);
+    }
+  }
+}
+
+.dollar {
+  background: url("images/icon-dollar.svg") no-repeat 16px 50%;
+}
+.person {
+  background: url("images/icon-person.svg") no-repeat 16px 50%;
 }

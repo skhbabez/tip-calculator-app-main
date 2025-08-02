@@ -18,12 +18,50 @@
   <body>
     <main>
       <article>
-        <button class="control btn-reset">Reset</button>
+        <button class="btn btn-reset">Reset</button>
 
-        <label class="control btn-check" for="tip-5"
+        <label class="btn btn-check"
           >5%
-          <input id="tip-5" type="checkbox" name="tip" value="5" />
+          <input type="checkbox" name="tip" value="5" />
         </label>
+        <label class="btn btn-check"
+          >10%
+          <input type="checkbox" name="tip" value="10" />
+        </label>
+        <label class="btn btn-check"
+          >15%
+          <input type="checkbox" name="tip" value="15" />
+        </label>
+        <label class="btn btn-check"
+          >20%
+          <input type="checkbox" name="tip" value="20" />
+        </label>
+        <label class="btn btn-check"
+          >25%
+          <input type="checkbox" name="tip" value="25" />
+        </label>
+
+        <input
+          class="input-custom"
+          name="tip-custom"
+          aria-label="custom"
+          placeholder="Custom"
+        />
+
+        <div class="input-number">
+          <label for="bill">
+            <p>Bill</p>
+            <p>Can’t be zero</p>
+          </label>
+          <input id="bill" class="dollar" type="text" placeholder="0" />
+        </div>
+        <div class="input-number">
+          <label for="no-people">
+            <p>Number of People</p>
+            <p>Can’t be zero</p>
+          </label>
+          <input id="no-people" class="person" type="text" placeholder="0" />
+        </div>
       </article>
     </main>
   </body>
