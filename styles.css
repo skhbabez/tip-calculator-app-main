@@ -22,6 +22,7 @@ img {
   --font-base: "Space Mono", sans-serif;
   --font-weight-bold: 700;
   --grey-50: hsl(189, 47%, 97%);
+  --grey-400: hsl(184, 14%, 56%);
   --grey-550: hsl(180, 18%, 40%);
   --grey-500: hsl(186, 14%, 43%);
   --grey-300: hsl(184, 19%, 68%);
@@ -37,6 +38,8 @@ img {
   --font-step-1: 1rem;
   --font-step-2: 1.25rem;
   --font-step-3: 1.5rem;
+  --font-step-4: 2rem;
+  --font-step-5: 3rem;
 }
 
 body {
@@ -166,4 +169,31 @@ body {
 }
 .person {
   background: url("images/icon-person.svg") no-repeat 16px 50%;
+}
+
+.amount-container {
+  inline-size: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.amount-label {
+  & p:first-of-type {
+    color: white;
+  }
+  & p:last-of-type {
+    font-size: var(--font-step-0);
+    color: var(--grey-400);
+  }
+  & p::before {
+    content: "/ ";
+  }
+}
+
+.amount {
+  font-size: var(--font-step-5);
+  color: var(--green-400);
+  &::before {
+    content: "$";
+  }
 }
