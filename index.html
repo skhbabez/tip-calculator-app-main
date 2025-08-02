@@ -21,53 +21,64 @@
         <h1>spli<br />tter</h1>
       </header>
       <article class="calculator">
-        <label class="btn btn-check"
-          >5%
-          <input type="checkbox" name="tip" value="5" />
-        </label>
-        <label class="btn btn-check"
-          >10%
-          <input type="checkbox" name="tip" value="10" />
-        </label>
-        <label class="btn btn-check"
-          >15%
-          <input type="checkbox" name="tip" value="15" />
-        </label>
-        <label class="btn btn-check"
-          >20%
-          <input type="checkbox" name="tip" value="20" />
-        </label>
-        <label class="btn btn-check"
-          >25%
-          <input type="checkbox" name="tip" value="25" />
-        </label>
+        <form novalidate>
+          <div class="input-number">
+            <label class="input-label" for="bill">
+              <p>Bill</p>
+              <p>Can’t be zero</p>
+            </label>
+            <input
+              id="bill"
+              class="control dollar"
+              type="text"
+              placeholder="0"
+            />
+          </div>
+          <fieldset>
+            <p class="input-label">Select Tip %</p>
+            <div class="btn-grid">
+              <label class="btn btn-check"
+                >5%
+                <input type="checkbox" name="tip" value="5" />
+              </label>
+              <label class="btn btn-check"
+                >10%
+                <input type="checkbox" name="tip" value="10" />
+              </label>
+              <label class="btn btn-check"
+                >15%
+                <input type="checkbox" name="tip" value="15" />
+              </label>
+              <label class="btn btn-check"
+                >20%
+                <input type="checkbox" name="tip" value="20" />
+              </label>
+              <label class="btn btn-check"
+                >25%
+                <input type="checkbox" name="tip" value="25" />
+              </label>
 
-        <input
-          class="control input-custom"
-          name="tip-custom"
-          aria-label="custom"
-          placeholder="Custom"
-        />
-
-        <div class="input-number">
-          <label for="bill">
-            <p>Bill</p>
-            <p>Can’t be zero</p>
-          </label>
-          <input id="bill" class="control dollar" type="text" placeholder="0" />
-        </div>
-        <div class="input-number">
-          <label for="no-people">
-            <p>Number of People</p>
-            <p>Can’t be zero</p>
-          </label>
-          <input
-            id="no-people"
-            class="control person"
-            type="text"
-            placeholder="0"
-          />
-        </div>
+              <input
+                class="control input-custom"
+                name="tip-custom"
+                aria-label="custom"
+                placeholder="Custom"
+              />
+            </div>
+          </fieldset>
+          <div class="input-number">
+            <label class="input-label" for="no-people">
+              <p>Number of People</p>
+              <p>Can’t be zero</p>
+            </label>
+            <input
+              id="no-people"
+              class="control person"
+              type="text"
+              placeholder="0"
+            />
+          </div>
+        </form>
         <div class="results-container">
           <div class="amounts">
             <div class="amount">

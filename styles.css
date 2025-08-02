@@ -57,6 +57,22 @@ body {
   background-color: var(--grey-200);
 }
 
+header {
+  padding-block-start: 50px;
+  padding-block-end: 40px;
+}
+& h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.6ch;
+  line-height: 1.5;
+  color: var(--grey-600);
+  text-align: center;
+}
+
+fieldset {
+  border: none;
+}
+
 .btn {
   user-select: none;
   font-family: inherit;
@@ -65,7 +81,6 @@ body {
   line-height: inherit;
   border: none;
   border-radius: 8px;
-  width: 100%;
   padding-block: var(--space-8);
   outline: none;
   text-transform: uppercase;
@@ -96,8 +111,6 @@ body {
   color: white;
   text-align: center;
   position: relative;
-  block-size: 100%;
-  inline-size: 100%;
   display: inline-block;
   font-size: var(--font-step-3);
   & input {
@@ -132,7 +145,6 @@ body {
   outline: none;
   border: none;
   padding-block: var(--space-8);
-  inline-size: 100%;
   border-radius: 8px;
 }
 
@@ -140,21 +152,22 @@ body {
   color: var(--grey-550);
   font-size: var(--font-step-3);
   text-align: center;
-  inline-size: 100%;
 }
 
+.input-label {
+  color: var(--grey-500);
+}
 .input-number {
   & label {
     display: flex;
     justify-content: space-between;
-    & p:first-of-type {
-      color: var(--grey-500);
-    }
+
     & p:last-of-type {
       color: var(--orange-400);
     }
   }
   & input {
+    inline-size: 100%;
     margin-block-start: var(--space-8);
     background-color: var(--grey-50); /*why cant I remove this*/
     color: var(--green-900);
@@ -174,10 +187,17 @@ body {
   background: url("images/icon-person.svg") no-repeat 16px 50%;
 }
 
+.amounts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
 .amount {
   inline-size: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .amount-label {
@@ -212,12 +232,6 @@ body {
   gap: var(--space-32);
 }
 
-.amounts {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-24);
-}
-
 .calculator {
   border-radius: 25px 25px 0 0;
 
@@ -227,16 +241,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: var(--space-mt-32-40);
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-32);
+  }
 }
 
-header {
-  padding-block-start: 50px;
-  padding-block-end: 40px;
-}
-& h1 {
-  text-transform: uppercase;
-  letter-spacing: 0.5ch;
-  color: var(--grey-600);
-  text-align: center;
-  line-height: 1;
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+  gap: 16px;
+  margin-top: var(--space-8);
 }
