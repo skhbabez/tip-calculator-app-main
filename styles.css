@@ -34,12 +34,15 @@ img {
   --orange-400: hsl(13, 70%, 60%);
   --space-8: 0.5rem;
   --space-16: 1rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
   --font-step-0: 0.8125rem;
   --font-step-1: 1rem;
   --font-step-2: 1.25rem;
   --font-step-3: 1.5rem;
   --font-step-4: 2rem;
   --font-step-5: 3rem;
+  --fluid-32-48: clamp(2rem, 1.0458rem + 4.0712vw, 3rem); /*m-t*/
 }
 
 body {
@@ -55,7 +58,7 @@ body {
   font-size: inherit;
   line-height: inherit;
   border: none;
-  border-radius: 1px;
+  border-radius: 8px;
   width: 100%;
   padding-block: var(--space-8);
   outline: none;
@@ -124,7 +127,7 @@ body {
   border: none;
   padding-block: var(--space-8);
   inline-size: 100%;
-  border-radius: 1px;
+  border-radius: 8px;
 }
 
 .input-custom {
@@ -165,7 +168,7 @@ body {
   background: url("images/icon-person.svg") no-repeat 16px 50%;
 }
 
-.amount-container {
+.amount {
   inline-size: 100%;
   display: flex;
   justify-content: space-between;
@@ -178,16 +181,33 @@ body {
   & p:last-of-type {
     font-size: var(--font-step-0);
     color: var(--grey-400);
-  }
-  & p::before {
-    content: "/ ";
+    &::before {
+      content: "/ ";
+    }
   }
 }
 
-.amount {
-  font-size: var(--font-step-5);
+.amount-value {
+  font-size: var(--fluid-32-48);
   color: var(--green-400);
   &::before {
     content: "$";
   }
+}
+
+.results-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--green-900);
+  padding-inline: var(--space-24);
+  padding-block: var(--space-24);
+  border-radius: 15px;
+  gap: var(--space-32);
+}
+
+.amounts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
 }

@@ -17,8 +17,7 @@
   </head>
   <body>
     <main>
-      <article>
-        <button type="reset" class="btn btn-reset">Reset</button>
+      <article class="wrapper">
         <label class="btn btn-check"
           >5%
           <input type="checkbox" name="tip" value="5" />
@@ -66,19 +65,24 @@
             placeholder="0"
           />
         </div>
-        <div class="amount-container">
-          <div class="amount-label">
-            <p>Tip Amount</p>
-            <p>person</p>
+        <div class="results-container">
+          <div class="amounts">
+            <div class="amount">
+              <div class="amount-label">
+                <p>Tip Amount</p>
+                <p>person</p>
+              </div>
+              <p class="amount-value">0.00</p>
+            </div>
+            <div class="amount">
+              <div class="amount-label">
+                <p>Total</p>
+                <p>person</p>
+              </div>
+              <p class="amount-value">0.00</p>
+            </div>
           </div>
-          <p class="amount">0.00</p>
-        </div>
-        <div class="amount-container">
-          <div class="amount-label">
-            <p>Total</p>
-            <p>person</p>
-          </div>
-          <p class="amount">0.00</p>
+          <button type="reset" class="btn btn-reset">Reset</button>
         </div>
       </article>
     </main>
