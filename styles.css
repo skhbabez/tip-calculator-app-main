@@ -162,9 +162,30 @@ fieldset {
 }
 
 .input-custom {
-  color: var(--grey-550);
   font-size: var(--font-step-3);
   text-align: center;
+  width: 100%;
+  height: 100%;
+  color: var(--green-900);
+  padding-inline: 20px;
+  &::placeholder {
+    color: var(--grey-550);
+  }
+}
+
+.percentage {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  color: var(--grey-550);
+  font-size: var(--font-step-3);
+  &:has(:not(input:placeholder-shown))::after {
+    content: "%";
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .input-label {
