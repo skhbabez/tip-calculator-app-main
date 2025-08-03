@@ -78,6 +78,10 @@ fieldset {
   border: none;
 }
 
+:is(input, button):hover {
+  cursor: pointer;
+}
+
 .btn {
   user-select: none;
   font-family: inherit;
@@ -131,6 +135,7 @@ fieldset {
   &:has(input:focus-visible) {
     background-color: var(--green-200);
     color: var(--green-900);
+    cursor: pointer;
   }
   &:has(input:checked) {
     color: var(--green-900);
@@ -147,6 +152,13 @@ fieldset {
   border: none;
   padding-block: var(--space-8);
   border-radius: 8px;
+  &.outline-success {
+    outline: solid 2px var(--green-400);
+  }
+
+  &.outline-error {
+    outline: solid 2px var(--orange-400);
+  }
 }
 
 .input-custom {

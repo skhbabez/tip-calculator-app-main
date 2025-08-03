@@ -25,7 +25,7 @@
           <div class="input-number">
             <label class="input-label" for="input-bill">
               <p>Bill</p>
-              <p id="bill-error">Can’t be zero</p>
+              <p id="bill-error"></p>
             </label>
             <input
               id="input-bill"
@@ -71,7 +71,7 @@
           <div class="input-number">
             <label class="input-label" for="input-people">
               <p>Number of People</p>
-              <p id="people-error">Can’t be zero</p>
+              <p id="people-error"></p>
             </label>
             <input
               id="input-people"
@@ -99,7 +99,13 @@
               <p id="total" class="amount-value">0.00</p>
             </div>
           </div>
-          <button form="tip-form" type="reset" class="btn btn-reset">
+          <button
+            disabled
+            form="tip-form"
+            id="reset"
+            type="reset"
+            class="btn btn-reset"
+          >
             Reset
           </button>
         </div>
