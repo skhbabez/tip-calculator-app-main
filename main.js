@@ -18,7 +18,7 @@ const isNumber = (number) => {
 const validations = {
   bill: (bill) => isNumber(bill) && bill > 0,
   people: (people) => isNumber(people) && people % 1 === 0 && people > 0,
-  tip: (tip) => isNumber(tip) && tip > 0,
+  tip: (tip) => isNumber(tip) && tip >= 0,
 };
 
 const isValid = (key, value) => {
@@ -53,7 +53,7 @@ const updateResult = () => {
   const formData = new FormData(form);
   const tipToggle = formData.get("tip");
   const tipCustom = formData.get("tip-custom");
-  const tip = tipCustom || tipToggle || "";
+  const tip = tipCustom || tipToggle || "0";
   const bill = formData.get("bill") || "";
   const people = formData.get("people") || "";
   const validated =
