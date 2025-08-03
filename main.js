@@ -1,7 +1,7 @@
 "use strict";
 const calculator = document.getElementById("calculator");
 const form = document.getElementById("tip-form");
-const tipButtons = calculator.querySelectorAll("input[type='checkbox']");
+const tipButtons = calculator.querySelectorAll("input[type='radio']");
 const customInput = document.getElementById("input-custom");
 const billInput = document.getElementById("input-bill");
 const peopleInput = document.getElementById("input-people");
@@ -41,11 +41,9 @@ const calculateBill = (people = 1, bill = 0, tip = 0) => {
   return [floorCurrency(tipPerPerson), roundCurrency(total)];
 };
 
-const updateToggles = (tip = "") => {
+const resetToggles = () => {
   tipButtons.forEach((btn) => {
-    if (tip !== btn.value) {
-      btn.checked = false;
-    }
+    btn.checked = false;
   });
 };
 
@@ -53,7 +51,7 @@ const updateResult = () => {
   const formData = new FormData(form);
   const tipToggle = formData.get("tip");
   const tipCustom = formData.get("tip-custom");
-  const tip = tipCustom || tipToggle || "0";
+  const tip = tipCustom || tipToggle || "";
   const bill = formData.get("bill") || "";
   const people = formData.get("people") || "";
   const validated =
@@ -67,12 +65,11 @@ const updateResult = () => {
 };
 
 const handleTip = (event) => {
-  if (event.currentTarget.type === "checkbox") {
-    updateToggles(event.currentTarget.value);
+  if (event.currentTarget.name === "tip") {
     customInput.value = "";
   }
-  if (event.currentTarget.type === "text") {
-    updateToggles();
+  if (event.currentTarget.name === "tip-custom") {
+    resetToggles();
   }
   updateResult();
 };
