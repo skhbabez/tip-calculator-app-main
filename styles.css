@@ -247,11 +247,12 @@ fieldset {
   display: grid;
   gap: var(--space-mt-32-40);
   box-shadow: 0px 32px 43px 5px #4fa6af;
-  & form {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-mt-32-24);
-  }
+}
+
+.bill-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-mt-32-24);
 }
 
 .btn-grid {
@@ -268,10 +269,11 @@ fieldset {
     min-width: 57.5rem;
     padding: var(--space-32);
     gap: var(--space-48);
-    & form {
-      padding-block: var(--space-16);
-      gap: var(--space-40);
-    }
+  }
+
+  .bill-section {
+    padding-block: var(--space-16);
+    gap: var(--space-40);
   }
   .results-container {
     padding-bottom: 38px;
