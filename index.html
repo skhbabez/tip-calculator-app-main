@@ -20,15 +20,15 @@
       <header>
         <h1>spli<br />tter</h1>
       </header>
-      <article class="calculator">
-        <div class="bill-section">
+      <article id="calculator" class="calculator">
+        <form id="tip-form" novalidate>
           <div class="input-number">
-            <label class="input-label" for="bill">
+            <label class="input-label" for="input-bill">
               <p>Bill</p>
-              <p>Can’t be zero</p>
+              <p id="bill-error">Can’t be zero</p>
             </label>
             <input
-              id="bill"
+              id="input-bill"
               class="control dollar"
               type="text"
               placeholder="0"
@@ -59,6 +59,7 @@
               </label>
 
               <input
+                id="input-custom"
                 class="control input-custom"
                 name="tip-custom"
                 aria-label="custom"
@@ -67,18 +68,18 @@
             </div>
           </fieldset>
           <div class="input-number">
-            <label class="input-label" for="no-people">
+            <label class="input-label" for="input-people">
               <p>Number of People</p>
-              <p>Can’t be zero</p>
+              <p id="people-error">Can’t be zero</p>
             </label>
             <input
-              id="no-people"
+              id="input-people"
               class="control person"
               type="text"
               placeholder="0"
             />
           </div>
-        </div>
+        </form>
         <div class="results-container">
           <div class="amounts">
             <div class="amount">
@@ -96,7 +97,9 @@
               <p class="amount-value">0.00</p>
             </div>
           </div>
-          <button type="reset" class="btn btn-reset">Reset</button>
+          <button form="tip-form" type="reset" class="btn btn-reset">
+            Reset
+          </button>
         </div>
       </article>
     </main>

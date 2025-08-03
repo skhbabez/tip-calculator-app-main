@@ -136,10 +136,6 @@ fieldset {
     color: var(--green-900);
     background-color: var(--green-400);
   }
-  &:has(input:disabled) {
-    color: white;
-    background-color: var(--green-900);
-  }
 }
 
 .control {
@@ -162,6 +158,7 @@ fieldset {
 .input-label {
   color: var(--grey-500);
 }
+
 .input-number {
   & label {
     display: flex;
@@ -247,12 +244,11 @@ fieldset {
   display: grid;
   gap: var(--space-mt-32-40);
   box-shadow: 0px 32px 43px 5px #4fa6af;
-}
-
-.bill-section {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-mt-32-24);
+  & form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-mt-32-24);
+  }
 }
 
 .btn-grid {
@@ -262,6 +258,15 @@ fieldset {
   margin-top: var(--space-8);
 }
 
+@media (min-width: 768px) {
+  .results-container {
+    gap: var(--space-16);
+  }
+  .amounts {
+    gap: var(--space-8);
+  }
+}
+
 @media (min-width: 1280px) {
   .calculator {
     grid-auto-flow: column;
@@ -269,14 +274,17 @@ fieldset {
     min-width: 57.5rem;
     padding: var(--space-32);
     gap: var(--space-48);
+    & form {
+      padding-block: var(--space-16);
+      gap: var(--space-40);
+    }
   }
 
-  .bill-section {
-    padding-block: var(--space-16);
-    gap: var(--space-40);
-  }
   .results-container {
     padding-bottom: 38px;
     padding-top: 37px;
+  }
+  .amounts {
+    gap: var(--space-24);
   }
 }
