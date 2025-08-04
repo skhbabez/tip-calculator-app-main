@@ -305,13 +305,14 @@ fieldset {
     & form {
       padding-block: var(--space-16);
       gap: var(--space-40);
+      padding-inline-start: var(--space-16);
     }
   }
 
   header {
     block-size: 19rem;
     align-items: start;
-    padding: 10.25rem;
+    padding-top: 10.25rem;
   }
 
   .results-container {
