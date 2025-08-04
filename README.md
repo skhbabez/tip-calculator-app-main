@@ -80,7 +80,7 @@ const handleTip = (event) => {
 
 ### Continued development
 
-I need to fócus on writing cleaner code in css. While I like my solutions in geneal a lot better now, they still lack maintainability (especially when it comes to using custom properties). I am also not particularly happy with the way I wrote my javascript and I am looking for a cleaner solution handling the form state.
+I need to fócus on writing cleaner code in css. While I like my solutions in geneal a lot better now, they still lack maintainability (especially when it comes to using custom properties). I am also not particularly happy with the way I wrote my javascript and I am looking for a cleaner solution handling the form state. I might come back to this to get the sizings right but i want to continue on my learning journey for now.
 
 ### Useful resources
 
