@@ -84,7 +84,7 @@ fieldset {
   font-size: inherit;
   line-height: inherit;
   border: none;
-  border-radius: 8px;
+  border-radius: 5px;
   padding-block: var(--space-8);
   outline: none;
   text-transform: uppercase;
@@ -146,7 +146,7 @@ fieldset {
   outline: none;
   border: none;
   padding-block: var(--space-8);
-  border-radius: 8px;
+  border-radius: 5px;
   &.outline-success {
     outline: solid 2px var(--green-400);
   }
