@@ -59,19 +59,14 @@ body {
   font-weight: var(--font-weight-bold);
   line-height: 1.5;
   background-color: var(--grey-200);
-  min-block-size: 100dvh;
+  block-size: 100dvh;
 }
 
 header {
-  padding-block-start: 50px;
-  padding-block-end: 40px;
-}
-& h1 {
-  text-transform: uppercase;
-  letter-spacing: 0.6ch;
-  line-height: 1.5;
-  color: var(--grey-600);
-  text-align: center;
+  block-size: 9rem;
+  display: grid;
+  justify-items: center;
+  align-items: center;
 }
 
 fieldset {
@@ -311,6 +306,12 @@ fieldset {
       padding-block: var(--space-16);
       gap: var(--space-40);
     }
+  }
+
+  header {
+    block-size: 19rem;
+    align-items: start;
+    padding: 10.25rem;
   }
 
   .results-container {
